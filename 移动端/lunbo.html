@@ -75,7 +75,8 @@ $(function(){
     touch.on("body","dragend",".box",function(e){
        if(Math.abs(e.x)<100){
            $(".box").css({
-               marginLeft:num*width,
+
+               marginLeft:-num*width,
                transition:"margin-left 1s ease"
            })
        }else {
@@ -84,6 +85,7 @@ $(function(){
                num++;
                if (num > 2) {
                    num = $(".box a").length - 1;
+                   alert(num);
                }
                $(".box").css({
                    marginLeft: -num * width,
